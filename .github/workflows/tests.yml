@@ -45,7 +45,7 @@ jobs:
     
     - name: Install Playwright browsers
       run: |
-        playwright install --with-deps chromium
+        playwright install chromium
 
     # Step 4: Run tests
     - name: Run pytest with coverage

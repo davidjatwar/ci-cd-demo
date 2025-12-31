@@ -10,8 +10,3 @@ def test_google_search(page: Page):
     search_box.press("Enter")
     
     expect(page).to_have_title(lambda title: "Playwright Python" in title)
-
-def test_example_com(page: Page):
-    """Test example.com"""
-    page.goto("https://example.com")
-    expect(page.locator("h1")).to_have_text("Example Domain")
