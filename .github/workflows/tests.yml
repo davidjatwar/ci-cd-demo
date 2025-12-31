@@ -47,7 +47,7 @@ jobs:
     - name: Run pytest with coverage
       run: |
         pip install pytest-cov
-        pytest -v --cov=tests --cov-report=html --cov-report=term --html=reports/report-py${{ matrix.python-version }}.html --self-contained-html
+        pytest -v -n auto --cov=tests --cov-report=html --cov-report=term --html=reports/report-py${{ matrix.python-version }}.html --self-contained-html
     
     # Step 5: Upload test report (even if tests fail)
     - name: Upload test report
