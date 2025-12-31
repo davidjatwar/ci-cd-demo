@@ -20,3 +20,7 @@ class TestMathOperations:
     def test_addition_with_floats(self):
         result = add(0.1, 0.2)
         assert round(result, 1) == 0.3
+
+    def test_multiplication(self):
+        assert 2 * 3 == 6
+        assert 5 * 0 == 0
