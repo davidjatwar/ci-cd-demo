@@ -43,6 +43,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
+    - name: Install Playwright browsers
+      run: |
+        playwright install --with-deps chromium
+
     # Step 4: Run tests
     - name: Run pytest with coverage
       run: |
