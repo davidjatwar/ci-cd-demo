@@ -54,7 +54,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()  # Upload even if tests fail
       with:
-        name: test-report
+        name: test-report-python-${{ matrix.python-version }}
         path: reports/
 
     - name: Upload coverage report
