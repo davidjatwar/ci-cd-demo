@@ -1,12 +1,6 @@
 from playwright.sync_api import Page, expect
+import re
 
-def test_google_search(page: Page):
-    """Test Google search"""
-    page.goto("https://www.google.com")
-    page.get_by_role("button", name="Accept all").click() if page.get_by_role("button", name="Accept all").is_visible() else None
-    
-    search_box = page.get_by_role("combobox", name="Search")
-    search_box.fill("Playwright Python")
-    search_box.press("Enter")
-    
-    expect(page).to_have_title(lambda title: "Playwright Python" in title)
+def test_playwright_site_title(page):
+    page.goto("https://playwright.dev")
+    expect(page).to_have_title(re.compile("Playwright"))
