@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.git/
+.gitignore
+.env
+venv/
+env/
+*.md
+.vscode/
+.idea/
+htmlcov/
+.coverage
+reports/
